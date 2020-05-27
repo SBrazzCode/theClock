@@ -1,0 +1,12 @@
+.tooth {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  width: 0.8vw;
+  height: 110%;
+  background: #222;
+  border-radius: 0.2vw;
+}

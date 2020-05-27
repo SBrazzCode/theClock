@@ -1,0 +1,8 @@
+.gear {
+  position: relative;
+  background: #222;
+  border-radius: 50%;
+  z-index: 1;
+  transition: .4s
+}
+
