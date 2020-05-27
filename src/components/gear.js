@@ -98,12 +98,12 @@ function getGearPosition(wheelName) {
     case "EscapeWheel":
       return {
         top: "0",
-        left: "36.5vw",
+        left: "12vw",
       }
     case "FourthWheel":
       return {
         top: "1vh",
-        left: "0vw",
+        left: "12vw",
       }
   }
 }
