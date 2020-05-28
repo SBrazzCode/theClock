@@ -1,27 +1,18 @@
 import React from "react"
 import gearRotationLayerStyles from "./styles/gearRotationLayer.module.css"
 
-export default class GearRotationLayer extends React.Component {
-  constructor(props) {
-    super(props)
-  }
+export default function GearRotationLayer(props) {
+  const rotation = getRotation(
+    props.time,
+    props.numTeeth,
+    props.wheelName
+  )
 
-  render() {
-    const rotation = getRotation(
-      this.props.time,
-      this.props.numTeeth,
-      this.props.wheelName
-    )
-
-    return (
-      <div
-        className={gearRotationLayerStyles.gearRotationLayer}
-        style={rotation}
-      >
-        {this.props.children}
-      </div>
-    )
-  }
+  return (
+    <div className={gearRotationLayerStyles.gearRotationLayer} style={rotation}>
+      {props.children}
+    </div>
+  )
 }
 
 /*  When I start using json objects, I can replace wheelName with isClockwise;

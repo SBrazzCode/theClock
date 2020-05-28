@@ -7,24 +7,29 @@ import React from "react"
 export default class Escapement extends React.Component {
   constructor(props) {
     super(props)
+    this.tick = this.tick.bind(this)
   }
 
   componentDidMount() {
-    this.timerID = setInterval(() => this.tick(), 1000)
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.timerID)
+    this.tick()
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.ticking == false && prevProps.ticking == true) {
-        clearInterval(this.timerID)
+    //If the ticking property has changed, and it is now ticking, jumpstart the tick function
+    if (this.props.ticking != prevProps.ticking) {
+      if (this.props.ticking) {
+        this.tick()
+      }
     }
   }
 
+
+  //While the property ticking is true, tick every second.  
   tick() {
-    this.props.onTick()
+    if (this.props.ticking) {
+      this.props.onTick()
+      setTimeout(this.tick, 1000)
+    }
   }
 
   render() {

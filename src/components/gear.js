@@ -1,7 +1,5 @@
 import React from "react"
 import centerStyles from "./styles/center.module.css"
-import counterClockwiseSpinStyles from "./styles/counterClockwiseSpin.module.css"
-import clockwiseSpinStyles from "./styles/clockwiseSpin.module.css"
 import Teeth from "./teeth.js"
 import GearStyleLayer from "./gearStyleLayer.js"
 import GearRotationLayer from "./gearRotationLayer.js"
@@ -11,10 +9,7 @@ import GearRotationLayer from "./gearRotationLayer.js"
 */
 export default function Gear(props) {
   return (
-    <GearStyleLayer
-      numTeeth={props.numTeeth}
-      wheelName={props.wheelName}
-    >
+    <GearStyleLayer numTeeth={props.numTeeth} wheelName={props.wheelName}>
       <GearRotationLayer
         numTeeth={props.numTeeth}
         wheelName={props.wheelName}
