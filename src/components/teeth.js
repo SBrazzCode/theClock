@@ -1,5 +1,5 @@
 import React from "react"
-import toothStyles from "./tooth.module.css"
+import toothStyles from "./styles/tooth.module.css"
 
 /* Creates all teeth for a single gear.
   It creates a div for each tooth, and it rotates that tooth according to
@@ -20,6 +20,7 @@ export default function Teeth(props) {
     ></div>
   ))
 
+  //The parent div is just to modularize the compiled html
   return <div>{teeth}</div>
 }
 

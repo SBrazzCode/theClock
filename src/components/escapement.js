@@ -17,7 +17,7 @@ export default class Escapement extends React.Component {
     clearInterval(this.timerID)
   }
 
-  componentDidUpdate(prevProps) { //not working
+  componentDidUpdate(prevProps) {
     if (this.props.ticking == false && prevProps.ticking == true) {
         clearInterval(this.timerID)
     }
