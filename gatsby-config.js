@@ -5,8 +5,6 @@ module.exports = {
     author: `@ShaunBrazzoni`,
   },
 
-  pathPrefix: "/theClock",
-
   plugins: [
     {
       resolve: `gatsby-source-graphql`,
@@ -15,7 +13,7 @@ module.exports = {
         fieldName: `github`,
         url: `https://api.github.com/graphql`,
         headers: {
-          Authorization: `adf1efcba8f7ba09f99cc847a340bf76aca9d598`,
+          Authorization: `Bearer your-github-token`,
         },
       },
     },
