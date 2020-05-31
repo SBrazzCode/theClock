@@ -2,7 +2,6 @@
   "gears": [
     {
       "wheelName": "EscapeWheel",
-      "numTeeth": 30,
       "top": "-5vh",
       "left": "0vw",
       "clockWiseMultiple": -1
@@ -10,7 +9,6 @@
 
     {
       "wheelName": "FourthWheel",
-      "numTeeth": 20,
       "top": "0vh",
       "left": "3vw",
       "clockWiseMultiple": 1

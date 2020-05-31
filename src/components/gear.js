@@ -9,15 +9,10 @@ import GearRotationLayer from "./gearRotationLayer.js"
 */
 export default function Gear(props) {
   return (
-    <GearStyleLayer
-      numTeeth={props.numTeeth}
-      wheelName={props.wheelName}
-      top={props.top}
-      left={props.left}
-    >
+    <GearStyleLayer numTeeth={props.numTeeth} wheelName={props.wheelName}>
       <GearRotationLayer
         numTeeth={props.numTeeth}
-        clockwiseMultiple={props.clockWiseMultiple}
+        wheelName={props.wheelName}
         time={props.time}
       >
         <div className={centerStyles.center}></div>
