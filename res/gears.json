@@ -3,17 +3,32 @@
     {
       "wheelName": "EscapeWheel",
       "numTeeth": 30,
-      "top": "-5vh",
+      "top": "0vh",
       "left": "0vw",
-      "clockWiseMultiple": -1
+      "clockWiseMultiple": -1,
+      "color": "#777",
+      "pinion": {
+        "numTeeth": 10,
+        "color": "#111"
+      }
     },
 
     {
       "wheelName": "FourthWheel",
       "numTeeth": 20,
-      "top": "0vh",
-      "left": "3vw",
-      "clockWiseMultiple": 1
+      "top": "-5vh",
+      "left": "1.5vw",
+      "clockWiseMultiple": 1,
+      "color": "#777"
+    },
+
+    {
+      "wheelName": "FifthWheel",
+      "numTeeth": 40,
+      "top": "17vh",
+      "left": "-25.4vw",
+      "clockWiseMultiple": 1,
+      "color": "#777"
     }
   ]
 }

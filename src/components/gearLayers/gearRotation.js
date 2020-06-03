@@ -1,5 +1,5 @@
 import React from "react"
-import gearRotationLayerStyles from "./styles/gearRotationLayer.module.css"
+import gearRotationLayerStyles from "../styles/gearRotationLayer.module.css"
 
 export default function GearRotationLayer(props) {
   const rotation = getRotation(
@@ -15,12 +15,10 @@ export default function GearRotationLayer(props) {
   )
 }
 
-/*  When I start using json objects, I can replace wheelName with isClockwise;
-    I would call getRotation(..., this.props.wheelObject.clockWiseMultiple)
+/* The rotation is a function of time. Each rotation is equal to one toothAngleGap 
+(it rotates one tooth at a time). The clockwiseMultiple is 1 for clockWise -1 for counter.
 */
 function getRotation(time, numTeeth, clockWiseMultiple) {
-  //isClockWise gets assigned 1 or -1. -1 if it is counter-clockwise
-  // const isClockwise = isClockWise(wheelName)
 
   //the angle between each tooth
   const teethAngleGap = 360 / numTeeth
@@ -32,15 +30,3 @@ function getRotation(time, numTeeth, clockWiseMultiple) {
 
   return { transform: `rotate(` + currentRotation + `deg)` }
 }
-
-//Could rethink this. Have two arrays/one array and use .contains?
-// i.e let clockWiseGears = {"FourthWheel", "SecondWheel"}
-// function isClockWise(wheelName) {
-//   switch (wheelName) {
-//     case "EscapeWheel":
-//       return -1
-
-//     case "FourthWheel":
-//       return 1
-//   }
-// }

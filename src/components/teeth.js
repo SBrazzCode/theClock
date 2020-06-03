@@ -11,12 +11,21 @@ export default function Teeth(props) {
   //Get an array of angles for each tooth.
   const teethAngles = getTeethAngles(numTeeth)
 
-  //For each angle create a div and rotate it angle degrees.
+  //Create an object from the color prop
+  const backgroundColor = {
+    background: props.color,
+  }
+
+  /*  For each angle create a div and rotate it angle degrees.
+    In the styles property we combine the background color with the rotation.
+  */
   const teeth = teethAngles.map(angle => (
     <div
       key={angle.toString()}
       className={toothStyles.tooth}
-      style={{ transform: `rotate(` + angle + `deg)` }}
+      style={Object.assign({}, backgroundColor, {
+        transform: `rotate(` + angle + `deg)`,
+      })}
     ></div>
   ))
 
