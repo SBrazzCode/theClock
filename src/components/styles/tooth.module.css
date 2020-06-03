@@ -6,7 +6,7 @@
   top: 0;
   bottom: 0;
   width: 0.8vw;
-  height: 110%;
-  background: #222;
+  /* height: 110%; */
+    height: calc(110% + .4vh); /* the .4vh creates a more realistic groove in pinions */
   border-radius: 0.2vw;
 }

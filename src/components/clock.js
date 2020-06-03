@@ -1,10 +1,13 @@
 import React from "react"
-import Gear from "./gear.js"
+// import Gear from "./gear.js"
 import clockStyles from "./styles/clock.module.css"
 import Escapement from "./escapement.js"
 import stopButtonStyles from "./styles/stopButton.module.css"
 import startButtonStyles from "./styles/startButton.module.css"
 import "bootstrap/dist/css/bootstrap.css"
+import gearObjects from "../../res/gears.json"
+import Wheel from "./wheel.js"
+import Pinion from "./pinion.js"
 require("bootstrap")
 
 export default class Clock extends React.Component {
@@ -35,8 +38,43 @@ export default class Clock extends React.Component {
 
     return (
       <div className={clockStyles.clock}>
-        <Gear numTeeth={30} wheelName="EscapeWheel" time={time} />
-        <Gear numTeeth={20} wheelName="FourthWheel" time={time} />
+        {/* <Wheel numTeeth={30} wheelName="EscapeWheel" color="#222" time={time}>
+          <Pinion numTeeth={10} color="red"/>
+        </Wheel>
+        <Wheel numTeeth={20} wheelName="FourthWheel" color="#222" time={time} /> */}
+        {/* {gearObjects.gears.map((data, index) => {
+          return ( if(data.pionon != null)
+            <Wheel gearObject={data} key={index} time={time}>
+              {if(data.pinion != null){<Pinion pinionObject={data.pinion} />}}
+            </Wheel>
+          )
+        })} */}
+
+        {/* {gearObjects.gears.map((data, index) => {
+
+              if(data.pinion != null){
+                return <Wheel gearObject={data} key={index} time={time}>
+                  <Pinion pinionObject={data.pinion} />
+                </Wheel>
+              }else{
+                return <Wheel gearObject={data} key={index} time={time}/>
+              }
+        })} */}
+        {gearObjects.gears.map((data, index) => {
+          return (
+            <Wheel gearObject={data} key={index} time={time}>
+              {data.pinion != null && <Pinion pinionObject={data.pinion} />}
+            </Wheel>
+          )
+        })}
+
+        {/* {gearObjects.gears.map((data, index) => {
+          const val = (
+            <Wheel gearObject={data} key={index} time={time}>
+              <Pinion pinionObject={data.pinion} />
+            </Wheel>
+          )
+        })} */}
 
         <Escapement
           onTick={this.tick}
