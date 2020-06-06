@@ -3,32 +3,67 @@
     {
       "wheelName": "EscapeWheel",
       "numTeeth": 30,
-      "top": "0vh",
-      "left": "0vw",
-      "clockWiseMultiple": -1,
+      "top": "5vw",
+      "left": "15vw",
       "color": "#777",
+      "rotationData": {
+        "initialRotation": 0,
+        "rotationMultiple": -1
+      },
       "pinion": {
         "numTeeth": 10,
         "color": "#111"
-      }
+      },
+      "zIndex": 0
     },
-
     {
       "wheelName": "FourthWheel",
+      "numTeeth": 30,
+      "top": "5vw",
+      "left": "26.3vw",
+      "color": "#999",
+      "rotationData": {
+        "initialRotation": -4.7,
+        "rotationMultiple": 0.3333
+      },
+      "zIndex": 2
+    },
+    {
+      "wheelName": "SecondHand1",
+      "numTeeth": 10,
+      "top": "21.2vw",
+      "left": "31.5vw",
+      "color": "#999",
+      "rotationData": {
+        "initialRotation": -4.5,
+        "rotationMultiple": -0.3333
+      },
+      "zIndex": 0
+    },
+    {
+      "wheelName": "SecondHand2",
       "numTeeth": 20,
-      "top": "-5vh",
-      "left": "1.5vw",
-      "clockWiseMultiple": 1,
-      "color": "#777"
+      "top": "27.1vw",
+      "left": "28.5vw",
+      "color": "#999",
+      "rotationData": {
+        "initialRotation": 15,
+        "rotationMultiple": 0.3333
+      },
+      "zIndex": 0
     },
 
     {
-      "wheelName": "FifthWheel",
+      "wheelName": "CenterWheel",
       "numTeeth": 40,
-      "top": "17vh",
-      "left": "-25.4vw",
-      "clockWiseMultiple": 1,
-      "color": "#777"
+      "top": "7vw",
+      "left": "40vw",
+      "color": "#777",
+      "rotationData": {
+        "initialRotation": 4,
+        "rotationMultiple": -1
+      },
+      "zIndex": 0
     }
   ]
 }

@@ -5,10 +5,16 @@ export default function GearPosition(props) {
 
   //Get the position for this gear
   // const gearPosition = getGearPosition(props.wheelName)
-  const gearPosition = getGearPosition(props.top, props.left)
+  const xyPosition = getGearPosition(props.top, props.left)
+
+  const zIndex = {
+    zIndex: props.zIndex
+  }
+
+  const positions = Object.assign({}, xyPosition, zIndex)
 
   return (
-    <div className={gearPositionStyles.gearPosition} style={gearPosition}>
+    <div className={gearPositionStyles.gearPosition} style={positions}>
       {props.children}
     </div>
   )

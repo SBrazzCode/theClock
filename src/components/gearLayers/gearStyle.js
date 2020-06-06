@@ -6,8 +6,9 @@ export default function GearStyle(props) {
   //Get the width for this gear.
   const gearSize = calcGearSize(props.numTeeth)
   const backgroundColor = {
-    background: props.color,
+    background: props.color
   }
+
   const styles = Object.assign({}, gearSize, backgroundColor)
 
   return (
@@ -38,4 +39,12 @@ function calcGearSize(numTeeth) {
     height: diameter + "vw",
     width: diameter + "vw",
   }
+  // return {
+  //   height: "calc(" + diameter/2 + "vw" + " + " + diameter/2 + "vh)",
+  //   width: "calc(" + diameter/2 + "vw" + " + " + diameter/2 + "vh)",
+  // }
+  // return {
+  //   height: diameter + "vh",
+  //   width: diameter + "vh",
+  // }
 }

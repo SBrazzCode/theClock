@@ -11,7 +11,7 @@ export default function GearCore(props) {
   return (
     <div className={gearCoreStyles.gearCore}>
       <div>
-        <div className={centerStyles.center}></div>
+        {/* <div className={centerStyles.center}></div> */}
         <Teeth numTeeth={props.numTeeth} color={props.color}/>
       </div>
       {props.children}

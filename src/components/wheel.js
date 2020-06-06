@@ -14,8 +14,8 @@ This was done to modularize the wheel.
   This gear was inspired by the css gear https://codepen.io/sketchbookkeeper/pen/jrmYXm.
 */
 export default function Wheel(props) {
-const gearObject = props.gearObject
-const time = props.time
+  const gearObject = props.gearObject
+  const time = props.time
   // return (
   //   <GearPosition wheelName={props.wheelName}>
   //     <GearStyle numTeeth={props.numTeeth} color={props.color}>
@@ -32,17 +32,22 @@ const time = props.time
   return (
     // I would have liked to use object destructuring. However, this does not work for GearPosition, for the
     // field top is already a global variable (could not find a workaround in sufficient time).
-    <GearPosition top={gearObject.top} left={gearObject.left}> 
+    <GearPosition
+      top={gearObject.top}
+      left={gearObject.left}
+      zIndex={gearObject.zIndex}
+    >
       <GearStyle numTeeth={gearObject.numTeeth} color={gearObject.color}>
         <GearRotation
           numTeeth={gearObject.numTeeth}
-          clockWiseMultiple={gearObject.clockWiseMultiple}
+          rotationData={gearObject.rotationData}
           time={time}
         >
-          <GearCore numTeeth={gearObject.numTeeth} color={gearObject.color}>{props.children}</GearCore>
+          <GearCore numTeeth={gearObject.numTeeth} color={gearObject.color}>
+            {props.children}
+          </GearCore>
         </GearRotation>
       </GearStyle>
     </GearPosition>
   )
-
 }

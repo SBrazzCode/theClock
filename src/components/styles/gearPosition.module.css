@@ -1,8 +1,10 @@
 .gearPosition{
-    position: relative;
+    position: fixed;
     z-index: 1;
   
-    /* Auto margins help keep the gears teeth aligned for different screen resolutions*/
+    /* Auto margins help keep the gears teeth aligned for different screen resolutions
+    
+    Update: it might be useless, more tests need to be done*/
     margin-top: auto;
     margin-bottom: auto;
   }
