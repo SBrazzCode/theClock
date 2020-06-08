@@ -1,0 +1,5 @@
+.escapementRotation{
+    transition: 1s;
+    transition-delay: .0s;
+    transition-timing-function: ease-in-out;
+}

@@ -1,0 +1,18 @@
+.position {
+  position: fixed;
+  z-index: 4;
+}
+
+.style {
+  width: 0.5vw;
+  background: #000;
+  border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
+}
+
+.rotation {
+  transition: 0.35s;
+  transition-delay: 0.27s;
+  transition-timing-function: ease-in;
+  transform-origin: top center;
+}

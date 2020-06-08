@@ -1,0 +1,47 @@
+.pendulum {
+  position: absolute;
+}
+
+.pendulumShaftOne {
+  position: relative;
+  top: 0vw;
+  left: 4.85vw;
+  height: 10vw;
+  width: 1vw;
+  background: #aaa;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+}
+
+.pendulumShaftTwo {
+  position: relative;
+  top: -7.5vw;
+  left: 12vw;
+  height: 15vw;
+  width: 1vw;
+  background: #aaa;
+  border-radius: 20%;
+  transform: rotate(-90deg);
+}
+
+.pendulumRod {
+  position: relative;
+  top: -17.1vw;
+  left: 23vw;
+  height: 10vw;
+  width: 1vw;
+  border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
+  background: #aaa;
+  transform: rotate(-52.5deg);
+}
+
+.pendulumBob {
+  position: relative;
+  top: 9vw;
+  right: 1.5vw;
+  border-radius: 50%;
+  width: 4vw;
+  height: 4vw;
+  background: #222;
+}
