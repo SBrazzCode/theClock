@@ -1,6 +1,9 @@
 import React from "react"
 import gearRotationLayerStyles from "../styles/gearRotationLayer.module.css"
 
+/*
+  The rotation of the gear. The rotation of the gear is a function of time.
+*/
 export default function GearRotation(props) {
   const rotation = getRotation(
     props.time,

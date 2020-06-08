@@ -12,7 +12,7 @@
       },
       "pinion": {
         "numTeeth": 10,
-        "color": "#111"
+        "color": "#999"
       },
       "zIndex": 0
     },
@@ -61,7 +61,7 @@
       "color": "#777",
       "rotationData": {
         "initialRotation": 4,
-        "rotationMultiple": -1
+        "rotationMultiple": -0.08333333333
       },
       "zIndex": 0
     }

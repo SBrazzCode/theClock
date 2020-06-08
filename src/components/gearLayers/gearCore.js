@@ -10,10 +10,10 @@ export default function GearCore(props) {
 
   return (
     <div className={gearCoreStyles.gearCore}>
-      <div>
+      {/* <div> */}
         {/* <div className={centerStyles.center}></div> */}
         <Teeth numTeeth={props.numTeeth} color={props.color}/>
-      </div>
+      {/* </div> */}
       {props.children}
     </div>
   )

@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.css"
 import gearObjects from "../../res/gears.json"
 import Wheel from "./wheel.js"
 import Pinion from "./pinion.js"
+import ClockHand from "./clockHand.js"
 require("bootstrap")
 
 export default class Clock extends React.Component {
@@ -22,7 +23,7 @@ export default class Clock extends React.Component {
   //On each tick increment time by 1 second each. Every components rotation
   //is a multiple of this time.
   tick() {
-    this.setState({ time: this.state.time + 1 })
+    this.setState(state => ({ time: state.time + 1 }))
   }
 
   stopTime() {
@@ -38,28 +39,6 @@ export default class Clock extends React.Component {
 
     return (
       <div className={clockStyles.clock}>
-        {/* <Wheel numTeeth={30} wheelName="EscapeWheel" color="#222" time={time}>
-          <Pinion numTeeth={10} color="red"/>
-        </Wheel>
-        <Wheel numTeeth={20} wheelName="FourthWheel" color="#222" time={time} /> */}
-        {/* {gearObjects.gears.map((data, index) => {
-          return ( if(data.pionon != null)
-            <Wheel gearObject={data} key={index} time={time}>
-              {if(data.pinion != null){<Pinion pinionObject={data.pinion} />}}
-            </Wheel>
-          )
-        })} */}
-
-        {/* {gearObjects.gears.map((data, index) => {
-
-              if(data.pinion != null){
-                return <Wheel gearObject={data} key={index} time={time}>
-                  <Pinion pinionObject={data.pinion} />
-                </Wheel>
-              }else{
-                return <Wheel gearObject={data} key={index} time={time}/>
-              }
-        })} */}
         {gearObjects.gears.map((data, index) => {
           return (
             <Wheel gearObject={data} key={index} time={time}>
@@ -68,13 +47,7 @@ export default class Clock extends React.Component {
           )
         })}
 
-        {/* {gearObjects.gears.map((data, index) => {
-          const val = (
-            <Wheel gearObject={data} key={index} time={time}>
-              <Pinion pinionObject={data.pinion} />
-            </Wheel>
-          )
-        })} */}
+        <ClockHand timeToRotate={60} height={"15vw"} top={"32.5vw"} left={"33.5vw"} time={time}/>
 
         <Escapement
           onTick={this.tick}

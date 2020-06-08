@@ -1,6 +1,9 @@
 import React from "react"
 import gearStyleStyles from "../styles/gearStyle.module.css"
 
+/*
+  All css styles that are not position or rotation.
+*/
 export default function GearStyle(props) {
   
   //Get the width for this gear.
@@ -39,12 +42,4 @@ function calcGearSize(numTeeth) {
     height: diameter + "vw",
     width: diameter + "vw",
   }
-  // return {
-  //   height: "calc(" + diameter/2 + "vw" + " + " + diameter/2 + "vh)",
-  //   width: "calc(" + diameter/2 + "vw" + " + " + diameter/2 + "vh)",
-  // }
-  // return {
-  //   height: diameter + "vh",
-  //   width: diameter + "vh",
-  // }
 }

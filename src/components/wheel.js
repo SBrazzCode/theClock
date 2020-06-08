@@ -16,19 +16,7 @@ This was done to modularize the wheel.
 export default function Wheel(props) {
   const gearObject = props.gearObject
   const time = props.time
-  // return (
-  //   <GearPosition wheelName={props.wheelName}>
-  //     <GearStyle numTeeth={props.numTeeth} color={props.color}>
-  //       <GearRotation
-  //         numTeeth={props.numTeeth}
-  //         wheelName={props.wheelName}
-  //         time={props.time}
-  //       >
-  //         <GearCore numTeeth={props.numTeeth}>{props.children}</GearCore>
-  //       </GearRotation>
-  //     </GearStyle>
-  //   </GearPosition>
-  // )
+
   return (
     // I would have liked to use object destructuring. However, this does not work for GearPosition, for the
     // field top is already a global variable (could not find a workaround in sufficient time).
