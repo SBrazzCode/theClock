@@ -1,13 +1,17 @@
 import React from "react"
 import gearStyleStyles from "../styles/gearStyle.module.css"
 
+/*
+  All css styles that are not position or rotation.
+*/
 export default function GearStyle(props) {
   
   //Get the width for this gear.
   const gearSize = calcGearSize(props.numTeeth)
   const backgroundColor = {
-    background: props.color,
+    background: props.color
   }
+
   const styles = Object.assign({}, gearSize, backgroundColor)
 
   return (

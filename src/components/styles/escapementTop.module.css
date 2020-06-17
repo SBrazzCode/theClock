@@ -1,0 +1,31 @@
+.escapementTop {
+  position: relative;
+  width: 10.7vw;
+  height: 1.1vw;
+  background: #aaa;
+  border-radius: 25%;
+}
+
+.leftPallet {
+  position: absolute;
+  left: 0.35vw;
+  bottom: 66%;
+  background: #aaa;
+  width: 0.5vw;
+  height: 2.0vw;
+  border-top-left-radius: 30%;
+  border-top-right-radius: 30%;
+  transform: rotate(20deg);
+}
+
+.rightPallet {
+  position: absolute;
+  right: 0.35vw;
+  bottom: 66%;
+  background: #aaa;
+  width: 0.5vw;
+  height: 2.1vw;
+  border-top-left-radius: 30%;
+  border-top-right-radius: 30%;
+  transform: rotate(-20deg);
+}

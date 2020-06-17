@@ -1,0 +1,6 @@
+.escapementRotation {
+  /* If this was a full second it creates a random glitch (suggesting the
+    central timing function isn't perfect) */
+  transition: 0.9s;
+  transition-timing-function: ease-in-out;
+}

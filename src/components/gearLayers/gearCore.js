@@ -1,5 +1,5 @@
 import React from "react"
-import centerStyles from "../styles/center.module.css"
+// import centerStyles from "../styles/center.module.css"
 import gearCoreStyles from "../styles/gearCore.module.css"
 import Teeth from "../teeth.js"
 
@@ -10,10 +10,10 @@ export default function GearCore(props) {
 
   return (
     <div className={gearCoreStyles.gearCore}>
-      <div>
-        <div className={centerStyles.center}></div>
+      {/* <div> */}
+        {/* <div className={centerStyles.center}></div> */}
         <Teeth numTeeth={props.numTeeth} color={props.color}/>
-      </div>
+      {/* </div> */}
       {props.children}
     </div>
   )

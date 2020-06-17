@@ -1,0 +1,33 @@
+.container{
+    position: absolute;
+    top: 55%;
+    left: 34%;
+    z-index: 1;
+    transition: .35s;
+    transition-delay: .27s;
+    transition-timing-function: ease-in;
+    font-family: 'Roboto', sans-serif;
+}
+
+.weightBox{
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 13vw solid #555;
+	border-left: 3.5vw solid transparent;
+	border-right: 3.5vw solid transparent;
+	height: 0;
+    width: 13vw;
+    text-align: center;
+    line-height: 13vw;
+    font-size: 3vw;
+    color: #fff;
+    font-family: Roboto;
+    margin-bottom: 5vw;
+}
+
+.rope{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1vw;
+    background: #e0e0e0;
+}

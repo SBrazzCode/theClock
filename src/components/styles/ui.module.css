@@ -1,0 +1,23 @@
+.controlPanel {
+  position: fixed;
+  width: 70%;
+  height: 40px;
+  bottom: 5%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #444;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 20;
+  border-radius: 1vw;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@media (min-width: 600px){
+    .controlPanel{
+        width: 350px;
+    }
+}
+
+

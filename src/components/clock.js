@@ -1,15 +1,8 @@
 import React from "react"
-// import Gear from "./gear.js"
-import clockStyles from "./styles/clock.module.css"
-import Escapement from "./escapement.js"
-import stopButtonStyles from "./styles/stopButton.module.css"
-import startButtonStyles from "./styles/startButton.module.css"
-import "bootstrap/dist/css/bootstrap.css"
-import gearObjects from "../../res/gears.json"
-import Wheel from "./wheel.js"
-import Pinion from "./pinion.js"
-require("bootstrap")
+import UI from "./ui.js"
+import ClockInternals from "./clockInternals.js"
 
+//The parent of all Clock features.
 export default class Clock extends React.Component {
   constructor(props) {
     super(props)
@@ -22,13 +15,17 @@ export default class Clock extends React.Component {
   //On each tick increment time by 1 second each. Every components rotation
   //is a multiple of this time.
   tick() {
-    this.setState({ time: this.state.time + 1 })
+    this.setState(state => ({ time: state.time + 1 }))
   }
 
+  //This function is passed to Clock's children. Ticking and time are lifted states,
+  //so this method lets Clock's children set ticking to false.
   stopTime() {
     this.setState({ ticking: false })
   }
 
+  //This function is passed to Clock's children. Ticking and time are lifted states,
+  //so this method lets Clock's children set ticking to true.
   startTime() {
     this.setState({ ticking: true })
   }
@@ -37,64 +34,9 @@ export default class Clock extends React.Component {
     const time = this.state.time
 
     return (
-      <div className={clockStyles.clock}>
-        {/* <Wheel numTeeth={30} wheelName="EscapeWheel" color="#222" time={time}>
-          <Pinion numTeeth={10} color="red"/>
-        </Wheel>
-        <Wheel numTeeth={20} wheelName="FourthWheel" color="#222" time={time} /> */}
-        {/* {gearObjects.gears.map((data, index) => {
-          return ( if(data.pionon != null)
-            <Wheel gearObject={data} key={index} time={time}>
-              {if(data.pinion != null){<Pinion pinionObject={data.pinion} />}}
-            </Wheel>
-          )
-        })} */}
-
-        {/* {gearObjects.gears.map((data, index) => {
-
-              if(data.pinion != null){
-                return <Wheel gearObject={data} key={index} time={time}>
-                  <Pinion pinionObject={data.pinion} />
-                </Wheel>
-              }else{
-                return <Wheel gearObject={data} key={index} time={time}/>
-              }
-        })} */}
-        {gearObjects.gears.map((data, index) => {
-          return (
-            <Wheel gearObject={data} key={index} time={time}>
-              {data.pinion != null && <Pinion pinionObject={data.pinion} />}
-            </Wheel>
-          )
-        })}
-
-        {/* {gearObjects.gears.map((data, index) => {
-          const val = (
-            <Wheel gearObject={data} key={index} time={time}>
-              <Pinion pinionObject={data.pinion} />
-            </Wheel>
-          )
-        })} */}
-
-        <Escapement
-          onTick={this.tick}
-          ticking={this.state.ticking}
-          time={time}
-        />
-
-        <input
-          type="button"
-          onClick={this.stopTime}
-          value="Stop Time"
-          className={`${"btn btn-danger"}  ${stopButtonStyles.stopButton}`}
-        />
-
-        <input
-          type="button"
-          onClick={this.startTime}
-          value="Start Time"
-          className={`${"btn btn-warning"}  ${startButtonStyles.startButton}`}
-        />
+      <div>
+        <ClockInternals time={time} tick={this.tick} ticking={this.state.ticking}/>
+        <UI stopTime={this.stopTime} startTime={this.startTime} />
       </div>
     )
   }
