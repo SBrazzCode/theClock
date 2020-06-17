@@ -24,7 +24,7 @@
       "color": "#999",
       "rotationData": {
         "initialRotation": -4.7,
-        "rotationMultiple": 0.3333
+        "rotationMultiple": 0.33333333333
       },
       "zIndex": 2
     },
@@ -36,7 +36,7 @@
       "color": "#999",
       "rotationData": {
         "initialRotation": -4.5,
-        "rotationMultiple": -0.3333
+        "rotationMultiple": -0.33333333333
       },
       "zIndex": 0
     },
@@ -48,22 +48,38 @@
       "color": "#999",
       "rotationData": {
         "initialRotation": 15,
-        "rotationMultiple": 0.3333
+        "rotationMultiple": 0.33333333333
       },
       "zIndex": 0
     },
 
     {
-      "wheelName": "CenterWheel",
-      "numTeeth": 40,
-      "top": "7vw",
+      "wheelName": "CenterWheel1",
+      "numTeeth": 80,
+      "top": "-2vw",
       "left": "40vw",
-      "color": "#777",
+      "color": "#606060",
       "rotationData": {
         "initialRotation": 4,
-        "rotationMultiple": -0.08333333333
+        "rotationMultiple": -0.11111111111
       },
-      "zIndex": 0
+      "pinion": {
+        "numTeeth": 10,
+        "color": "#999"
+      },
+      "zIndex": -2
+    },
+    {
+      "wheelName": "CenterWheel2",
+      "numTeeth": 50,
+      "top": "21.9vw",
+      "left": "43.1vw",
+      "color": "#888",
+      "rotationData": {
+        "initialRotation": 0,
+        "rotationMultiple": 0.01388888888
+      },
+      "zIndex": -1
     }
   ]
 }

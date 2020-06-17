@@ -1,5 +1,5 @@
 import React from "react"
-import centerStyles from "../styles/center.module.css"
+// import centerStyles from "../styles/center.module.css"
 import gearCoreStyles from "../styles/gearCore.module.css"
 import Teeth from "../teeth.js"
 

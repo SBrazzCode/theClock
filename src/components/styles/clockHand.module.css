@@ -1,13 +1,16 @@
 .position {
-  position: fixed;
+  position: absolute;
   z-index: 4;
 }
 
 .style {
-  width: 0.5vw;
+  width: 0.7vw;
   background: #000;
-  border-top-left-radius: 20%;
-  border-top-right-radius: 20%;
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+  border-width: .15vw;
+  border-style: solid;
+  border-color: #ddd;
 }
 
 .rotation {

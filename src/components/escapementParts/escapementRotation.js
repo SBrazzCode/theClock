@@ -35,7 +35,7 @@ export default function EscapementRotation(props) {
  */
 function getRotation(time, deviation, initialRotation) {
 
-  // beat alternates between 1 an -1
+  // beat alternates between 1 and -1 every second
   let beat = (time % 2 === 1 ? 1 : -1)
 
   const currentRotation = deviation * beat + initialRotation
