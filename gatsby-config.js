@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `theClock`,
     description: `A deconstructed grandfather clock.`,
-    author: `@ShaunBrazzoni`,
+    author: `@CrippledTable`,
     pathPrefix: '/theClock',
   },
   plugins: [
