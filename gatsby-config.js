@@ -3,6 +3,7 @@ module.exports = {
     title: `theClock`,
     description: `A deconstructed grandfather clock.`,
     author: `@ShaunBrazzoni`,
+    pathPrefix: '/theClock',
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -14,6 +15,7 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

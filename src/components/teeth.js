@@ -3,7 +3,9 @@ import toothStyles from "./styles/tooth.module.css"
 
 /* Creates all teeth for a single gear.
   It creates a div for each tooth, and it rotates that tooth according to
-  a calculated angle.
+  a calculated angle. You cannot make a gear with an uneven number of teeth;
+  the original design from https://codepen.io/sketchbookkeeper/pen/jrmYXm did
+  not allow for uneven numbers of teeth.
 */
 export default function Teeth(props) {
   const numTeeth = props.numTeeth
