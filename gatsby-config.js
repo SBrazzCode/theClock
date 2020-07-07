@@ -1,9 +1,9 @@
 module.exports = {
+  pathPrefix: '/theClock',
   siteMetadata: {
     title: `theClock`,
     description: `A deconstructed grandfather clock.`,
     author: `@ShaunBrazzoni`,
-    pathPrefix: '/theClock',
   },
   plugins: [
     `gatsby-plugin-sass`,

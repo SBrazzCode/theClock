@@ -134,3 +134,9 @@ body {
   max-width: 100%;
   overflow-x: hidden;
 }
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
