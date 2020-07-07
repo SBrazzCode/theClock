@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: `theClock`,
     description: `A deconstructed grandfather clock.`,
-    author: `@ShaunBrazzoni`,
+    author: `@CrippledTable`,
   },
   plugins: [
     `gatsby-plugin-sass`,
